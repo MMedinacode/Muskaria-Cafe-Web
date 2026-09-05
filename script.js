@@ -21,7 +21,7 @@ const MENU = {
     label: 'Chocolate y Té',
     groups: [
       { title: 'Chocolate caliente', items: [
-        { n: 'Chocolate espeso', p: 5590, d: 'Preparación de la casa con chocolate belga y cacao — el favorito según las reseñas' },
+        { n: 'Chocolate espeso', p: 5590, d: 'Preparación de la casa con chocolate belga y cacao — el favorito según las reseñas', img: 'fotos/p_chocolate_espeso.jpg' },
         { n: 'Chocolate americano', p: 4900, d: 'Con marshmallows y decorado con chocolate en rama' },
       ]},
       { title: 'Tecitos', items: [
@@ -36,10 +36,18 @@ const MENU = {
   },
   jugos: {
     label: 'Jugos y Smoothies',
-    groups: [{ title: 'Bebidas frías', items: [
-      { n: 'Jugo mango maracuyá', p: 3590, d: 'Jugo de pulpa guallarauco' },
-      { n: 'Sprite Zero', p: 2000 },
-    ]}]
+    groups: [
+      { title: 'Bebidas frías', items: [
+        { n: 'Jugo mango maracuyá', p: 3590, d: 'Jugo de pulpa guallarauco' },
+        { n: 'Sprite Zero', p: 2000 },
+      ]},
+      { title: 'Café frío', items: [
+        { n: 'Café helado', p: 5590, d: 'Dulce helado de vainilla, leche sin lactosa y un shot de espresso, decorado con crema chantilly y galleta wafer', img: 'fotos/p_cafe_helado.jpg' },
+        { n: 'Latte frío', p: 4800, d: 'Shot de espresso con leche fría endulzada con syrup de sabor a elección y hielo', img: 'fotos/p_latte_frio.jpg' },
+        { n: 'Affogato', p: 4590, d: 'Shot de espresso doble acompañado de helado de vainilla bravissimo y galleta de champaña', img: 'fotos/p_affogato.jpg' },
+        { n: 'Espresso Tónica', p: 3890, d: 'Preparación fría de bebida tónica acompañada de espresso con doble carga y hielo', img: 'fotos/p_espresso_tonica.jpg' },
+      ]},
+    ]
   },
   pasteleria: {
     label: 'Pastelería',
