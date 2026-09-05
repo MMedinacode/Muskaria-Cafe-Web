@@ -6,15 +6,14 @@
 <title>Café Muskaria — Cafetería y Salón de Té en Maipú</title>
 
 <!-- ============================================================
-     PROTOTIPO BETA — CAFÉ MUSKARIA
+     PROTOTIPO BETA — CAFÉ MUSKARIA (Tetería Muskaria)
      Datos verificados en Google Maps, Instagram (@muskaria.cafe) y
      su menú online (menu.fu.do) el 04-09-2026: dirección, horario,
-     rating, reseñas y precios reales.
-     PENDIENTE: no hay WhatsApp registrado en Google Maps ni logo/
-     colores de marca confirmados — se usa Instagram como canal de
-     contacto y una paleta inferida (terracota/crema) hasta que el
-     negocio confirme sus colores reales. Fotos: de ejemplo, a
-     reemplazar por fotos reales del local y los productos.
+     rating, reseñas y precios reales. Logo y fotos reales del local
+     entregados por el cliente. Paleta sacada del logo real (magenta,
+     morado, turquesa) y de las fotos del salón (rosa pastel, menta).
+     PENDIENTE: no hay WhatsApp registrado en Google Maps — se usa
+     Instagram como único canal de contacto.
      ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +26,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="#" class="nav-brand" data-tab="inicio">
-      <span class="brand-mark">M</span>
+      <img class="logo-mark" src="fotos/logo.png" alt="Logo Café Muskaria">
       <strong>Café Muskaria</strong>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -50,9 +49,9 @@
 <section id="tab-inicio" class="tab-panel active" data-tab-panel="inicio">
 <section class="hero" id="top">
   <div class="bg-photo">
-    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1600&auto=format&fit=crop" alt="">
+    <img src="fotos/fachada.jpg" alt="Fachada de Tetería Muskaria">
   </div>
-  <span class="brand-mark hero-mark">M</span>
+  <img class="logo-mark hero-mark" src="fotos/logo.png" alt="Logo Café Muskaria">
   <span class="eyebrow">Cafetería · Salón de té · Maipú</span>
   <h1>Café de especialidad, pastelería artesanal y dulces árabes en un salón para tod@s</h1>
   <p class="tagline">De la tostaduría propia al pie de limón, pasando por baclawa y ceregli — con opciones sin azúcar, sin gluten, veganas y sin lactosa en toda la carta.</p>
@@ -73,13 +72,13 @@
   <div class="wrap sobre">
     <span class="eyebrow" style="color:var(--rust);">quiénes somos</span>
     <h2 style="margin-bottom:20px;">Pastelería para tod@s</h2>
-    <p>Café Muskaria es una cafetería y salón de té en Parque Central, Maipú, con café de especialidad de tostaduría propia y una pastelería que se toma en serio la palabra "para todos": líneas completas sin azúcar, sin gluten, veganas y sin lactosa conviven con los clásicos de siempre y con dulces árabes como baclawa, ceregli y fatayer. Su pie de limón es una de las estrellas de la casa, y la hojarasca de manjar y frambuesa con merengue —apta para celíacos— es la otra reina indiscutida.</p>
+    <p>Tetería Muskaria es un salón de té y cafetería en Parque Central, Maipú, con un rincón de cuento: paredes rosa pastel, sillas menta, guirnaldas de luces y una pared llena de platos decorados, todo bajo la mirada de nuestro pequeño hongo mascota. Café de especialidad de tostaduría propia y una pastelería que se toma en serio la palabra "para todos": líneas completas sin azúcar, sin gluten, veganas y sin lactosa conviven con los clásicos de siempre y con dulces árabes como baclawa, ceregli y fatayer. Su pie de limón es una de las estrellas de la casa, y la hojarasca de manjar y frambuesa con merengue —apta para celíacos— es la otra reina indiscutida.</p>
     <div class="badges-row">
-      <span class="badge" style="border-color:rgba(181,86,58,0.35); color:var(--rust); background:rgba(181,86,58,0.06);">Tostaduría propia</span>
-      <span class="badge" style="border-color:rgba(181,86,58,0.35); color:var(--rust); background:rgba(181,86,58,0.06);">Dulces árabes</span>
-      <span class="badge" style="border-color:rgba(107,122,79,0.4); color:var(--olive); background:rgba(107,122,79,0.08);">Opciones sin gluten</span>
-      <span class="badge" style="border-color:rgba(107,122,79,0.4); color:var(--olive); background:rgba(107,122,79,0.08);">Opciones veganas</span>
-      <span class="badge" style="border-color:rgba(107,122,79,0.4); color:var(--olive); background:rgba(107,122,79,0.08);">Opciones sin azúcar</span>
+      <span class="badge" style="border-color:rgba(214,33,126,0.35); color:var(--rust); background:rgba(214,33,126,0.06);">Tostaduría propia</span>
+      <span class="badge" style="border-color:rgba(214,33,126,0.35); color:var(--rust); background:rgba(214,33,126,0.06);">Dulces árabes</span>
+      <span class="badge" style="border-color:rgba(79,156,144,0.4); color:var(--olive); background:rgba(79,156,144,0.08);">Opciones sin gluten</span>
+      <span class="badge" style="border-color:rgba(79,156,144,0.4); color:var(--olive); background:rgba(79,156,144,0.08);">Opciones veganas</span>
+      <span class="badge" style="border-color:rgba(79,156,144,0.4); color:var(--olive); background:rgba(79,156,144,0.08);">Opciones sin azúcar</span>
     </div>
   </div>
 </section>
@@ -93,12 +92,11 @@
       <h2>Nuestra pastelería</h2>
     </div>
     <div class="gallery-grid">
-      <figure><img src="https://images.unsplash.com/photo-1488477304112-4944851de03d?q=80&w=800&auto=format&fit=crop" alt="Vitrina de pastelería"><div class="gallery-tag">Vitrina del día</div></figure>
-      <figure><img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?q=80&w=800&auto=format&fit=crop" alt="Baclawa y dulces árabes"><div class="gallery-tag">Dulces árabes</div></figure>
-      <figure><img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=800&auto=format&fit=crop" alt="Pie de limón"><div class="gallery-tag">Pie de limón</div></figure>
-      <figure><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Café de especialidad"><div class="gallery-tag">Café de especialidad</div></figure>
+      <figure><img src="fotos/vitrina.jpg" alt="Vitrina de pastelería"><div class="gallery-tag">Vitrina del día</div></figure>
+      <figure><img src="fotos/mostrador.jpg" alt="Mostrador con carta de tés"><div class="gallery-tag">Nuestra tetería</div></figure>
+      <figure><img src="fotos/rincon_rosa.jpg" alt="Rincón rosa del salón"><div class="gallery-tag">Un rincón para quedarse</div></figure>
+      <figure><img src="fotos/platos_pared.jpg" alt="Pared decorada con platos"><div class="gallery-tag">Detalles con cariño</div></figure>
     </div>
-    <!-- FOTOGRAFÍAS DE EJEMPLO (Unsplash): reemplazar por fotos reales de la vitrina, el salón y los dulces árabes antes de la entrega final -->
   </div>
 </section>
 </section>
@@ -158,7 +156,7 @@
 </section>
 
 <section id="tab-visitanos" class="tab-panel" data-tab-panel="visitanos">
-<section class="visit" id="visitanos" style="background:linear-gradient(180deg, #6b4a35, var(--rust-dark)); color:#fff;">
+<section class="visit" id="visitanos" style="background:linear-gradient(180deg, #4a2a63, var(--purple)); color:#fff;">
   <div class="wrap visit-grid">
     <div>
       <div class="section-head dark" style="text-align:left; margin-bottom:32px;">
@@ -196,7 +194,7 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <span class="brand-mark footer-mark">M</span>
+    <img class="logo-mark footer-mark" src="fotos/logo.png" alt="Logo Café Muskaria">
     <p class="footer-tag">Cafetería y Salón de Té · Maipú</p>
     <p class="footer-contact">Parque Central Poniente 785, Maipú · <a href="https://instagram.com/muskaria.cafe" target="_blank" rel="noopener">Escríbenos por Instagram</a></p>
     <div class="footer-badges">
