@@ -12,7 +12,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth; scroll-padding-top:76px;}
-  body{font-family:'Inter',sans-serif; background:var(--cream); color:var(--text); -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  body{font-family:'Albert Sans',sans-serif; background:var(--cream); color:var(--text); -webkit-font-smoothing:antialiased; overflow-x:hidden;}
   h1,h2,h3{font-family:'Fraunces',serif; font-weight:700;}
   .mono{font-family:'Space Mono',monospace;}
   a{color:inherit;}
@@ -92,7 +92,7 @@
   .badge{font-size:0.76rem; font-weight:600; padding:8px 16px; border-radius:999px; border:1px solid; font-family:'Space Mono',monospace;}
 
   /* GALERIA */
-  .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px;}
   .gallery-grid figure{position:relative; overflow:hidden; border-radius:10px; aspect-ratio:3/4;}
   .gallery-grid img{transition:transform .5s ease;}
   .gallery-grid figure:hover img{transform:scale(1.06);}
@@ -128,7 +128,7 @@
   .resena-card footer{display:flex; align-items:center; gap:10px;}
   .resena-avatar{width:36px; height:36px; border-radius:50%; background:var(--rust); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.82rem; font-family:'Space Mono',monospace; flex-shrink:0;}
   .resena-meta{font-size:0.76rem; color:var(--text-soft); line-height:1.4;}
-  .resena-meta strong{display:block; color:var(--text); font-size:0.86rem; font-family:'Inter',sans-serif; font-weight:700;}
+  .resena-meta strong{display:block; color:var(--text); font-size:0.86rem; font-family:'Albert Sans',sans-serif; font-weight:700;}
   @media (max-width:900px){.resenas-grid{grid-template-columns:1fr;}}
 
   /* VISIT */
@@ -189,3 +189,13 @@
   @media (max-width:640px){
     section{padding:56px 20px;}
   }
+
+/* Quien active "reducir movimiento" en su sistema deberia ver la pagina
+   quieta: no es una preferencia estetica, hay gente a la que el
+   movimiento le produce mareo. */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important; animation-iteration-count:1 !important;
+    transition-duration:.01ms !important; scroll-behavior:auto !important;
+  }
+}
