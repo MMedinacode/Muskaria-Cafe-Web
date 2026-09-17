@@ -45,6 +45,82 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Albert+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café Muskaria",
+  "description": "Café Muskaria. Café de especialidad, pastelería artesanal y dulces árabes en un salón para tod@s. 4.6★ con 437 opiniones en Google.",
+  "image": "https://mmedinacode.github.io/Muskaria-Cafe-Web/fotos/fachada.jpg",
+  "url": "https://mmedinacode.github.io/Muskaria-Cafe-Web/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Parque Central Poniente 785",
+    "addressLocality": "Maipú",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "sameAs": [
+    "https://instagram.com/muskaria.cafe"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "08:30",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "08:30",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "08:30",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "08:30",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:30",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:30",
+      "closes": "21:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:30",
+      "closes": "21:30"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -136,7 +212,7 @@
     </div>
     <div class="menu-tabs" id="menuTabs"></div>
     <div id="menuPanels"></div>
-    <p class="menu-note">Precios de retiro en local. Consulta la carta sensorial de tés y por productos sin stock del día.</p>
+    <p class="menu-note">Precios de retiro en local. Consulta la carta sensorial de tés y los productos disponibles del día.</p>
   </div>
 </section>
 </section>
@@ -275,5 +351,7 @@
 <script>window.REDES={"intro": "Su Instagram muestra la carta completa y el ambiente del local.", "instagram": {"user": "muskaria.cafe", "fotos": ["fotos/p_affogato.jpg", "fotos/interior_luces.jpg", "fotos/mostrador.jpg"]}};</script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="vida.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>
