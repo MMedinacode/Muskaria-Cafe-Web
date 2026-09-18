@@ -158,6 +158,8 @@
   <p class="tagline">De la tostaduría propia al pie de limón, pasando por baclawa y ceregli — con opciones sin azúcar, sin gluten, veganas y sin lactosa en toda la carta.</p>
   <div class="hero-info">
     <div class="hero-pill"><span class="status-dot" id="statusDot"></span> <span id="statusText">Consultando horario…</span></div>
+    <!-- Se retira solo el 20: ver el script del final. -->
+    <div class="hero-pill hero-pill-aviso" data-hasta="2026-09-19">🇨🇱 <strong>18 y 19 abiertos</strong> · 10:00 a 18:00</div>
     <div class="hero-pill">★ <strong>4.6</strong> (437 opiniones)</div>
     <div class="hero-pill"><strong>Parque Central Pte. 785</strong>, Maipú</div>
   </div>
@@ -269,6 +271,9 @@
       <div class="visit-block">
         <h3>Horario</h3>
         <p>Lunes a viernes 8:30 a 21:30h<br>Sábado y domingo 9:30 a 21:30h</p>
+        <p class="aviso-fecha" data-hasta="2026-09-19">
+          <strong>Este 18 y 19</strong> abrimos de <strong>10:00 a 18:00</strong>.
+        </p>
         <div class="visit-pill"><span class="status-dot" id="statusDot2"></span> <span id="statusText2">Consultando horario…</span></div>
       </div>
       <div class="visit-block">
@@ -345,7 +350,19 @@
 <script src="script.js"></script>
 <script src="carta-fotos.js"></script>
 <!-- Horario REAL de su ficha de Google Maps (11-09-2026). El módulo horario.js pinta la semana completa y el estado en vivo. -->
-<script>window.HORARIO={dias:["08:30 - 21:30","08:30 - 21:30","08:30 - 21:30","08:30 - 21:30","08:30 - 21:30","09:30 - 21:30","09:30 - 21:30"],fuente:"Google Maps, 11-09-2026"};</script>
+<script>window.HORARIO = {
+  dias: ["08:30 - 21:30","08:30 - 21:30","08:30 - 21:30","08:30 - 21:30",
+         "08:30 - 21:30","09:30 - 21:30","09:30 - 21:30"],
+  fuente: "Google Maps, 11-09-2026",
+  /* Fiestas Patrias 2026: abren los dos días, pero de 10:00 a 18:00.
+     Confirmado por el local el 18-09-2026. Va por fecha, así que el
+     indicador de "abierto ahora" dice la verdad hoy y la excepción se
+     apaga sola cuando pasa la fecha. */
+  excepciones: {
+    "2026-09-18": "10:00 - 18:00",
+    "2026-09-19": "10:00 - 18:00"
+  }
+};</script>
 <script src="horario.js"></script>
 <!-- Redes sociales REALES del local, verificadas una por una. El modulo redes.js arma con esto la pestana Redes. -->
 <script>window.REDES={"intro": "Su Instagram muestra la carta completa y el ambiente del local.", "instagram": {"user": "muskaria.cafe", "fotos": ["fotos/p_affogato.jpg", "fotos/interior_luces.jpg", "fotos/mostrador.jpg"]}};</script>
@@ -353,5 +370,17 @@
 <script src="flotantes.js"></script>
 <script src="vida.js"></script>
 <script src="pulido.js"></script>
+<script>
+/* Lo que tiene fecha se retira solo al día siguiente. Así la página nunca
+   queda anunciando un horario de feriado en noviembre. */
+(function () {
+  var e = document.querySelectorAll('[data-hasta]');
+  for (var i = 0; i < e.length; i++) {
+    var f = e[i].getAttribute('data-hasta');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(f)) continue;
+    if (new Date() > new Date(f + 'T23:59:59')) e[i].hidden = true;
+  }
+})();
+</script>
 </body>
 </html>

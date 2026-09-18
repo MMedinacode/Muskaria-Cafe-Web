@@ -252,3 +252,20 @@
   .menu-item > [class*="price"],
   .menu-item > [class*="precio"]{ order:3; flex:0 0 auto; margin-left:0; }
 }
+
+/* ── Avisos con fecha ──────────────────────────────────────────────────
+   Un horario de feriado no es un dato más: es LO que la gente quiere
+   saber ese día. Por eso destaca sobre las demás pastillas del hero.
+   Ambos avisos llevan data-hasta y desaparecen solos. */
+.hero-pill-aviso{
+  background:var(--rust); color:#fff;
+  border-color:transparent; font-weight:600;
+}
+.hero-pill-aviso strong{color:#fff}
+.hero-pill[hidden], .aviso-fecha[hidden]{display:none !important}
+.aviso-fecha{
+  margin:10px 0 0; padding:9px 12px; border-radius:10px;
+  background:color-mix(in srgb, var(--rust) 12%, transparent);
+  border-left:3px solid var(--rust);
+  font-size:14.5px; line-height:1.5;
+}
